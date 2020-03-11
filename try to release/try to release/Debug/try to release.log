@@ -1,0 +1,6 @@
+﻿  Parsing.cpp
+  Source.cpp
+  Generating Code...
+D:\Work\FTL\2019-2020\Egor\try to release\try to release\Parsing.cpp(176): warning C4715: 'Parsing::T': not all control paths return a value
+D:\Work\FTL\2019-2020\Egor\try to release\try to release\Parsing.cpp(231): warning C4715: 'Parsing::B': not all control paths return a value
+  try to release.vcxproj -> D:\Work\FTL\2019-2020\Egor\try to release\Debug\try to release.exe
