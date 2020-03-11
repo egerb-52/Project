@@ -1,0 +1,25 @@
+#BNF for math equations
+
+#Operations
+OPERATIONS ::= 'PRINT '(NUMBER | NAME | REGS) | 'PLOT ' NAME'('NAME{','NAME}')' | 'DIF ' NAME ' BY ' NAME | 'ERROR 'NAME | 'LET '(VARIABLE|FUNC)
+REGS ::= 'ANS'
+
+#Functions
+SERIES ::= NAME '=['NUMBER{','NUMBER}']'
+FUNC ::= NAME'('NAME{','NAME}')='E
+
+#Variables
+VARIABLE ::= NAME '=' (N | E | NAME'('N{','N}')')
+
+#Math
+E ::= ['-'|'+']T'+'E | ['-'|'+']T'-'E | ['-'|'+']T 
+T ::= F'*'T | F'/'T | F
+F ::= B'^'F | B
+B ::= N | '('E')' | 'sin('E')' | 'cos('E')' | 'ln('E')' | 'tan('E')' | 'asin('E')' | 'acos('E')' | 'atan('E')'
+N ::= NUMBER | NAME
+
+NUMBER ::= DIGIT{DIGIT}['.'DIGIT{DIGIT}]
+NAME ::= LETTER{LETTER | DIGIT}
+
+DIGIT ::= '0' | ... | '9'
+LETTER ::= 'A' | ... | 'Z' | 'a' | ... | 'z' | '_'
